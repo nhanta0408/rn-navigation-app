@@ -11,7 +11,7 @@ function ScreenB({navigation}) {
       <View style={{flex: 1}}>
         <MashButton
           style={{backgroundColor: '#040899'}}
-          title="Screen B"
+          title="Screen A"
           textColor="white"
           onClick={() => navigation.navigate('Screen_A')}
         />
