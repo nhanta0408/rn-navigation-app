@@ -8,8 +8,10 @@ import ScreenA from './ScreenA';
 import ScreenB from './ScreenB';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 //const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+//const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 function App() {
   return (
     <NavigationContainer>
@@ -25,15 +27,13 @@ function App() {
             return (
               <MaterialIcons
                 name={iconName}
-                size={30}
-                color={focused ? '#040899' : '#cccccc'}
+                size={25}
+                color={focused ? '#040899' : '#ffffff'}
               />
             );
           },
-          tabBarActiveTintColor: '#040899',
-          tabBarLabelStyle: {fontSize: 14},
-          tabBarStyle: {height: 70},
-        })}>
+        })}
+        activeColor="#040899">
         <Tab.Screen name="Screen_A" component={ScreenA} />
         <Tab.Screen name="Screen_B" component={ScreenB} />
       </Tab.Navigator>
